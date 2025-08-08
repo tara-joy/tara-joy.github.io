@@ -1,0 +1,116 @@
+header.navbar-fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #222;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.navbar-brand {
+  margin-bottom: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #444;
+}
+
+.navbar-brand a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Victor Mono", monospace;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 2rem;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Victor Mono", monospace;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: color 0.2s;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.navbar-links a:hover {
+  color: #8ecae6;
+  background: #333;
+}
+
+body {
+  font-family: "Victor Mono", monospace;
+  margin: 0;
+  background: #f9f9f9;
+  color: #222;
+}
+
+.content-links a {
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #e0e0e0;
+  color: #222;
+  text-decoration: none;
+  font-family: "Victor Mono", monospace;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+
+.content-links a:hover {
+  background: #8ecae6;
+  color: #fff;
+}
+
+.two-column {
+  display: flex;
+  gap: 2rem;
+}
+.left-column {
+  flex: 1;
+  max-width: 33.33%;
+  background: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 3rem 1rem 1rem 1rem;
+  box-sizing: border-box;
+}
+.right-column {
+  flex: 2;
+  max-width: 66.66%;
+}
+@media (max-width: 800px) {
+  .two-column {
+    flex-direction: column;
+    width: 100%;
+  }
+  .left-column {
+    max-width: 100%;
+    min-height: auto;
+    padding: 1rem;
+    width: 100%;
+  }
+  .right-column {
+    max-width: 100%;
+    width: 100%;
+  }
+}
