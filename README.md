@@ -1,5 +1,6 @@
 # tarajoy.dev
 
+
 ## values:
 
 minimalism

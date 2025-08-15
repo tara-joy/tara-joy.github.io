@@ -31,9 +31,11 @@ github_username: tara-joy
 
 # Build settings
 markdown: kramdown
-theme: minima
+#theme: minima
 plugins:
   - jekyll-feed
+sass:
+  sass_dir: _sass
 # Exclude from processing.
 # Uncomment and edit as needed
 # exclude:

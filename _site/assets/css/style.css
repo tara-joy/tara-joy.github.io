@@ -1,12 +1,43 @@
-header.navbar-fixed {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: #222;
-  z-index: 1000;
+/* Forest Theme Colors */
+body {
+  background: #1b2e1b;
+  color: #e0e5c9;
+  margin: 0;
+  font-family: "Vollkorn", serif;
 }
 
+/* Layout and structure only */
+.three-column {
+  display: grid;
+  grid-template-columns: 23.6% 52.8% 23.6%;
+  height: 100vh;
+  width: 100vw;
+  gap: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.left-column,
+.middle-column,
+.right-column {
+  background: #1b2e1b;
+  color: #e0e5c9;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+/* Middle column scrollable without visible scrollbar */
+.middle-column {
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+.middle-column::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* Navbar and links */
 .navbar {
   display: flex;
   flex-direction: column;
@@ -16,16 +47,15 @@ header.navbar-fixed {
 }
 
 .navbar-brand {
-  margin-bottom: 0.5rem;
+  margin-bottom: 2.5rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #4caf50;
 }
 
 .navbar-brand a {
-  color: #fff;
+  color: #e0e5c9;
   text-decoration: none;
-  font-family: "Victor Mono", monospace;
-  font-size: 1.1rem;
+  font-size: 2.5rem;
   font-weight: bold;
   letter-spacing: 1px;
 }
@@ -41,9 +71,8 @@ header.navbar-fixed {
 }
 
 .navbar-links a {
-  color: #fff;
+  color: #e0e5c9;
   text-decoration: none;
-  font-family: "Victor Mono", monospace;
   font-size: 1.1rem;
   font-weight: bold;
   transition: color 0.2s;
@@ -52,65 +81,41 @@ header.navbar-fixed {
 }
 
 .navbar-links a:hover {
-  color: #8ecae6;
-  background: #333;
+  color: #4caf50;
 }
 
-body {
-  font-family: "Victor Mono", monospace;
-  margin: 0;
-  background: #f9f9f9;
-  color: #222;
+/* Links */
+a {
+  color: #4caf50;
 }
 
-.content-links a {
-  padding: 2px 6px;
-  border-radius: 4px;
-  background: #e0e0e0;
-  color: #222;
+a:hover {
+  color: #81c784;
+}
+
+.external {
+  color: #4caf50;
   text-decoration: none;
-  font-family: "Victor Mono", monospace;
-  font-weight: bold;
-  transition: background 0.2s, color 0.2s;
 }
 
-.content-links a:hover {
-  background: #8ecae6;
-  color: #fff;
+.external:hover {
+  color: #81c784;
 }
 
-.two-column {
-  display: flex;
-  gap: 2rem;
+.x-link {
+  display: inline-flex;
+  align-items: center;
 }
-.left-column {
-  flex: 1;
-  max-width: 33.33%;
-  background: #222;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  padding: 3rem 1rem 1rem 1rem;
-  box-sizing: border-box;
-}
-.right-column {
-  flex: 2;
-  max-width: 66.66%;
-}
-@media (max-width: 800px) {
-  .two-column {
-    flex-direction: column;
-    width: 100%;
+
+/* Responsive adjustment for mobile */
+@media (max-width: 900px) {
+  .three-column {
+    grid-template-columns: 1fr;
   }
-  .left-column {
-    max-width: 100%;
+  .left-column,
+  .middle-column,
+  .right-column {
     min-height: auto;
     padding: 1rem;
-    width: 100%;
-  }
-  .right-column {
-    max-width: 100%;
-    width: 100%;
   }
 }
